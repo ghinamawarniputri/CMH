@@ -4,9 +4,7 @@ Running nya: php artisan serve
 ---
 
 ## 📋 Prasyarat
-    ```bash
     pastikan versi php di atas 8.2
-    ```
 ---
 
 ## 🚀 Cara Instalasi
@@ -16,8 +14,7 @@ Running nya: php artisan serve
    git clone https://github.com/ghinamawarniputri/CMH.git
    ```
 2. **Aktifkan Laragon/XAMPP**:
-   ```bash
-   ```
+
 3. **Simpan file Laragon/XAMPP**:
    ```bash
    Laragon -> www
@@ -42,7 +39,8 @@ Running nya: php artisan serve
     ```
 ---
 
-## ✅ PUSH GITHUB
+## ✅ UPLOAD GITHUB
+1. **push github**
     ```bash
     git add .
     git commit -m "deskripsi"
