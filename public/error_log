@@ -1,0 +1,5 @@
+[14-Mar-2024 02:56:19 UTC] PHP Fatal error:  Composer detected issues in your platform: Your Composer dependencies require a PHP version ">= 8.2.0". You are running 8.1.27. in /home/yukmaric/bnc-cookies.yuk-mari.com/vendor/composer/platform_check.php on line 24
+[14-Mar-2024 04:59:23 UTC] PHP Fatal error:  Maximum execution time of 30 seconds exceeded in /home/yukmaric/bnc-cookies.yuk-mari.com/vendor/symfony/polyfill-mbstring/Mbstring.php on line 660
+[14-Mar-2024 05:00:15 UTC] PHP Fatal error:  Maximum execution time of 30 seconds exceeded in /home/yukmaric/bnc-cookies.yuk-mari.com/vendor/symfony/polyfill-mbstring/Mbstring.php on line 660
+[14-Mar-2024 05:13:38 UTC] PHP Fatal error:  Maximum execution time of 30 seconds exceeded in /home/yukmaric/bnc-cookies.yuk-mari.com/vendor/symfony/polyfill-mbstring/Mbstring.php on line 660
+[14-Mar-2024 05:14:51 UTC] PHP Fatal error:  Maximum execution time of 30 seconds exceeded in /home/yukmaric/bnc-cookies.yuk-mari.com/vendor/symfony/polyfill-mbstring/Mbstring.php on line 660
