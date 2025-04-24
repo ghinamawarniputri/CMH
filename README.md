@@ -30,6 +30,9 @@ Running nya: php artisan serve
    $ php -m 
     - cek apakah ada tulisan zip 
    $ composer install
+   $ cp .env.example .env
+    - klik .env 
+    - ganti database untuk menyesuaikan (yukmaric_bnc_cookies)
    $ php artisan key:generate
    $ php artisan migrate
    ```
@@ -37,6 +40,19 @@ Running nya: php artisan serve
     ```bash
     php artisan serve
     ```
+---
+
+## 📊 Cara Instalasi Database
+
+1. **Masuk ke lokalhost phpmyadmin**
+```bash
+create database yukmari_bnc_cookies
+```
+
+2. **Klik import**
+```bash
+Masukkan file sql yang ada di folder yang sudah di clone
+```
 ---
 
 ## ✅ UPLOAD GITHUB
