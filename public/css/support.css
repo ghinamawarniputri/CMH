@@ -1,0 +1,183 @@
+:root {
+    --background: #0e1117;
+    --heading: #f2f2f2;
+    --card: #1c1f26;
+    --pink: #ff007f;
+    --text: #a1a1b0;
+    --shadow: 0px 4px 12px rgba(255, 0, 127, 0.4);
+}
+
+.contact-us {
+    background: var(--background);
+    padding: 60px 0;
+    color: var(--heading);
+}
+
+.contact-us form {
+    background-color: var(--card);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+}
+
+/* Label Form */
+.contact-us label {
+    color: var(--heading);
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+/* Input Form */
+.contact-us input,
+.contact-us textarea {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: 1px solid var(--text);
+    border-radius: 4px;
+    background-color: var(--card);
+    color: var(--heading);
+}
+
+.contact-us input:-webkit-autofill,
+.contact-us textarea:-webkit-autofill {
+    background-color: var(--card) !important; /* Atur ulang warna latar belakang */
+    color: var(--heading) !important; /* Atur ulang warna teks */
+    border-color: var(--text) !important; /* Atur ulang warna border */
+}
+
+.contact-us input:not(:placeholder-shown),
+.contact-us textarea:not(:placeholder-shown) {
+    background-color: var(--background) !important;
+    color: var(--heading) !important; /* Sesuaikan warna teks jika perlu */
+    border-color: var(--text); /* Sesuaikan warna border jika perlu */
+}
+
+.contact-us input:focus,
+.contact-us textarea:focus {
+    outline: none;
+    border-color: var(--pink);
+    box-shadow: rgb(251, 0, 238) 2px 2px 2px 5px;
+}
+
+.contact-us input::placeholder,
+.contact-us textarea::placeholder {
+    color: var(--text); /* Warna placeholder */
+    font-style: italic; /* Gaya placeholder */
+}
+
+.custom-input {
+    border-color: var(--pink) !important;
+}
+
+.custom-input:focus {
+    border-color: #ff3399 !important;
+    box-shadow: 0 0 0 0.2rem rgba(255, 0, 127, 0.25) !important;
+    background: var(--background) !important;
+    color: var(--heading) !important;
+}
+
+.contact-info {
+    background: var(--card);
+    padding: 20px;
+    border-radius: 10px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.contact-info:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow);
+}
+
+.p-alamat {
+    font-size: 12px !important;
+    line-height: 1.5;
+    font-family: "Inter", sans-serif;
+    text-align: justify !important;
+}
+
+.recaptcha-container {
+    display: flex;
+    justify-content: center;
+    margin: 15px 0;
+    transition: all 0.3s ease;
+}
+
+.recaptcha-container:hover {
+    transform: translateY(-2px);
+}
+
+.error-message {
+    background: #ff4d4d;
+    color: white;
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: bold;
+    animation: shake 0.3s ease-in-out;
+}
+
+@keyframes shake {
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateX(-5px);
+    }
+    75% {
+        transform: translateX(5px);
+    }
+}
+
+/* Responsive adjustment */
+@media (max-width: 992px) {
+    .contact-us .row {
+        grid-template-columns: 1fr;
+    }
+}
+
+.contact-us .text-center h1 {
+    padding-top: 50px;
+    color: var(--heading);
+    font-family: "Rajdhani", sans-serif;
+}
+
+.contact-us .cta-support:disabled {
+    background-color: #cccccc; /* Warna abu-abu saat disabled */
+    color: #666666;
+    cursor: not-allowed; /* Ubah kursor menjadi not-allowed */
+}
+
+.contact-info h4 {
+    margin-bottom: 15px;
+    font-weight: bold;
+    color: var(--heading);
+    font-family: "Rajdhani", sans-serif;
+}
+
+.contact-info p {
+    margin: 0;
+    font-size: 1rem;
+}
+
+/* Tombol Submit */
+.contact-us .cta-support {
+    background-color: var(--background);
+    color: var(--heading);
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.contact-us .cta-support:hover {
+    background-color: var(--pink); /* Warna hover yang sedikit lebih gelap */
+    color: var(--background);
+}
+

@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\kontakController;
 
 /*
 |--------------------------------------------------------------------------
@@ -88,3 +89,5 @@ Route::get('/contact', function () {
 });
 
 Route::post('/auth/logout', [\App\Http\Controllers\Filament\LogoutController::class, 'logout'])->name('filament.admin.auth.logout');
+
+// Route::post('/contact/send', [ContactController::class, 'sendContact'])->name('contact.send');

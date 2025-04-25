@@ -74,10 +74,15 @@
                         </li>
                         <li class="nav-item">
                            <a class="nav-link" href="{{ url('about')}}">Tentang Kami</a>
-                        </li>
-                        <li class="nav-item">
-                           <a class="nav-link" href="{{ url('contact')}}">Kontak Kami</a>
-                        </li>
+                           <li class="nav-item dropdown">
+                              <a class="nav-link dropdown-toggle" href="{{ url('product')}}" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                  DUKUNGAN
+                              </a>
+                              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                  <a class="dropdown-item" href="{{ url('contact') }}">Hubungi Kami</a>
+                                  <a class="dropdown-item" href="https://www.instagram.com/yukmaridotcom/#" target="_blank">Instagram</a>
+                              </div>
+                          </li>
                         @auth
                         <li class="nav-item">
                             <a class="nav-link" href="{{ url('admin') }}">Dashboard</a>
