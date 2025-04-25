@@ -1,7 +1,10 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\kontakController;
+use App\Models\Category;
+use App\Models\Portfolio;
+use App\Http\Controllers\PortfolioController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -14,12 +17,21 @@ use App\Http\Controllers\kontakController;
 |
 */
 
-Route::get('/', function () {
-    $categories = \App\Models\Category::get();
+Route::get('/portfolio', [PortfolioController::class, 'index'])->name('portfolio');
 
-    $data = compact('categories');
-    return view('index', $data);
+Route::get('/', function () {
+    $categories = Category::all();
+    $portfolios = Portfolio::all();
+
+    return view('index', compact('categories', 'portfolios'));
 });
+
+// Route::get('/', function () {
+//     $categories = \App\Models\Category::get();
+
+//     $data = compact('categories');
+//     return view('index', $data);
+// });
 
 // PER PRODUKAN
 Route::get('/product', function () {
