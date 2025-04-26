@@ -1,6 +1,10 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Models\Category;
+use App\Models\Portfolio;
+use App\Http\Controllers\PortfolioController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -13,12 +17,21 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    $categories = \App\Models\Category::get();
+Route::get('/portfolio', [PortfolioController::class, 'index'])->name('portfolio');
 
-    $data = compact('categories');
-    return view('index', $data);
+Route::get('/', function () {
+    $categories = Category::all();
+    $portfolios = Portfolio::all();
+
+    return view('index', compact('categories', 'portfolios'));
 });
+
+// Route::get('/', function () {
+//     $categories = \App\Models\Category::get();
+
+//     $data = compact('categories');
+//     return view('index', $data);
+// });
 
 // PER PRODUKAN
 Route::get('/product', function () {
@@ -88,3 +101,5 @@ Route::get('/contact', function () {
 });
 
 Route::post('/auth/logout', [\App\Http\Controllers\Filament\LogoutController::class, 'logout'])->name('filament.admin.auth.logout');
+
+// Route::post('/contact/send', [ContactController::class, 'sendContact'])->name('contact.send');
