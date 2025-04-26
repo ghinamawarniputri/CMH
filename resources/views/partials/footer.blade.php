@@ -1,48 +1,51 @@
-<!-- footer start -->
-<footer>
+<footer class="footer">
     <div class="container">
-        <div class="row">
-            <div class="col-md-7">
-                <div class="full">
-                    <div class="logo_footer">
-                        <a href="#"><img width="163" height="113" src="{{ asset('vendor/images/logo.png')}}" alt="Logo" /></a>
-                    </div>
-                    <div class="information_f">
-                        <p> Jl. Sindangreret Kp. Kudang No 37 B RT 01/09
-                            Ds. Cibru, Cibiru Wetan, <br>Kec. Cileunyi, Kabupaten Bandung
-                            Jawa Barat 40165 <br> +62 81312072776 <br> bnc.cookiesbdg2@gmail.com</p>
-                        <div class="mb-2">
-                            <a target="_blank" href="https://www.instagram.com/bnc.cookiesbdg/" class="btn btn-outline-danger btn-sm"><i class="bi bi-instagram"></i></a>
-                            <a target="_blank" href="https://www.tiktok.com/@bnc.cookiesbdg" class="btn btn-outline-dark btn-sm"><i class="bi bi-tiktok"></i></a>
-                            <a target="_blank" href="https://api.whatsapp.com/send?phone=6281312072776&text=Halo%20admin%2C%20saya%20ingin%20memesan%20produk%20B%26C.%20Cookies%20Bandung" class="btn btn-outline-success btn-sm"><i class="bi bi-whatsapp"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-5">
-                <div class="row">
-                    <div class="col-md-7">
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="widget_menu">
-                                    <h3>Menu</h3>
-                                    <ul>
-                                        <li><a href="{{ url('/')}}">Home</a></li>
-                                        <li><a href="{{ url('product')}}">Produk</a></li>
-                                        <li><a href="{{ url('price-list')}}">Daftar Harga</a></li>
-                                        <li><a href="{{ url('about')}}">Tentang Kami</li>
-                                        <li><a href="{{ url('contact')}}">Kontak Kami</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-</footer>
-<!-- footer end -->
-<div class="cpy_">
-    <p class="mx-auto">V1.0.0 - 2024 &copy B&C Cookies. All Rights Reserved.<br>
-        Designed By <a href="https://yuk-mari.com/" target="_blank">Yuk-Mari Project</a>
-    </p>
-</div>
+      <div class="row d-flex justify-content-between">
+        <div class="col">
+          <h3 class="fw-bold">CreativeMusic<span class="hub">Hub</span></h3>
+          <p class="desc">
+            <i class="fa-solid fa-location-dot" style="margin-right: 8px;"></i>
+        Komplek Bandung Indah Raya, Blok C13/No.17, Kelurahan Mekarjaya, Kecamatan Rancasari, Kota Bandung, Jawa Barat 40286
+
+
+          </p>
+          <div class="no mb-1 mt-2">
+            <a href="#">
+              <i class="fa-brands fa-whatsapp" style="margin-right: 8px;"></i>
+              <p class="m-0">+62 822-9560-3115</p>
+            </a>
+          </div>
+          <div class="mail">
+            <a href="mailto:info@creativemusichub.com">
+              <i class="fa-regular fa-envelope" style="margin-right: 8px;"></i>
+              <p class="m-0">info@creativemusichub.com</p>
+            </a>
+          </div>
+          <div class="social mt-3">
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-solid fa-globe"></i>
+            <i class="fa-regular fa-envelope"></i>
+          </div>
+        </div>
+
+        <div class="col d-flex flex-column col-lg-4 col mt-lg-0 mt-5">
+          <h5 class="fw-bold">Our Products</h5>
+          <a href="/product1">Digital Beat Maker</a>
+          <a href="/product2">Guitar Tuner Pro</a>
+          <a href="/product3">Online Studio</a>
+          <a href="/product4">Custom Sound FX</a>
+        </div>
+
+        <div class="col d-flex flex-column col-lg-3 col mt-lg-0 mt-5">
+          <h5 class="fw-light">
+            Total Visitors: <span class="pengunjung">1,234</span>
+          </h5>
+          <div class="elfsight-app-954f2dc6-9353-4086-83d2-32455852907f"
+               data-elfsight-app-lazy
+               data-elfsight-counter-value="1234"></div>
+        </div>
+      </div>
+
+
+    </div>
+  </footer>

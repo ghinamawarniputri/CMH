@@ -29,27 +29,6 @@
 </section>
 <!-- end slider section -->
 
-<<<<<<< HEAD
-      <!-- footer start -->
-      @include("layouts.footer")
-
-      <!-- footer end -->
-      <div class="cpy_">
-         <p class="mx-auto">V1.0.0 - 2024 &copy B&C Cookies. All Rights Reserved.<br>
-            Designed By <a href="https://yuk-mari.com/" target="_blank">Yuk-Mari Project</a>
-         </p>
-      </div>
-      <!-- jQery -->
-      <script src="{{ asset('vendor/js/jquery-3.4.1.min.js')}}"></script>
-      <!-- popper js -->
-      <script src="{{ asset('vendor/js/popper.min.js')}}"></script>
-      <!-- bootstrap js -->
-      <script src="{{ asset('vendor/js/bootstrap.js')}}"></script>
-      <!-- custom js -->
-      <script src="{{ asset('vendor/js/custom.js')}}"></script>
-   </body>
-</html>
-=======
 <!-- why section -->
 <section class="catalog w-100 min-vh-100">
     <div class="container">
@@ -199,4 +178,3 @@
 </section>
 <!-- end portfolios section -->
 @endsection
->>>>>>> 5b9ed6902866aa2230e8b6fa55e2aa9b7f717bdd
