@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Models\Category;
 use App\Models\Portfolio;
 use App\Http\Controllers\PortfolioController;
+use App\Http\Controllers\LocalizationController;
 
 
 /*
@@ -16,6 +17,8 @@ use App\Http\Controllers\PortfolioController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+
+Route::get('/change-language/{lang}', [LocalizationController::class, 'changeLanguage'])->name('change-language');
 
 Route::get('/portfolio', [PortfolioController::class, 'index'])->name('portfolio');
 
@@ -42,48 +45,48 @@ Route::get('/product', function () {
 
 Route::get('/product-bolen', function () {
     $products = \App\Models\Product::where('visibility', true)
-                       ->where('category_id', 1)
-                       ->get();
+        ->where('category_id', 1)
+        ->get();
     $data = compact('products');
     return view('product-bolen', $data);
 });
 
 Route::get('/product-pastry', function () {
     $products = \App\Models\Product::where('visibility', true)
-                       ->where('category_id', 2)
-                       ->get();
+        ->where('category_id', 2)
+        ->get();
     $data = compact('products');
     return view('product-pastry', $data);
 });
 
 Route::get('/product-kue-kering-500gr', function () {
     $products = \App\Models\Product::where('visibility', true)
-                       ->where('category_id', 3)
-                       ->get();
+        ->where('category_id', 3)
+        ->get();
     $data = compact('products');
     return view('product-kue-kering-500gr', $data);
 });
 
 Route::get('/product-kue-kering-250gr', function () {
     $products = \App\Models\Product::where('visibility', true)
-                       ->where('category_id', 8)
-                       ->get();
+        ->where('category_id', 8)
+        ->get();
     $data = compact('products');
     return view('product-kue-kering-250gr', $data);
 });
 
 Route::get('/product-hampers', function () {
     $products = \App\Models\Product::where('visibility', true)
-                       ->where('category_id', 5)
-                       ->get();
+        ->where('category_id', 5)
+        ->get();
     $data = compact('products');
     return view('product-hampers', $data);
 });
 
 Route::get('/product-snack-dan-catering', function () {
     $products = \App\Models\Product::where('visibility', true)
-                       ->where('category_id', 6)
-                       ->get();
+        ->where('category_id', 6)
+        ->get();
     $data = compact('products');
     return view('product-snack-dan-catering', $data);
 });

@@ -29,11 +29,10 @@
         </div>
 
         <div class="col d-flex flex-column col-lg-4 col mt-lg-0 mt-5">
-          <h5 class="fw-bold">Our Products</h5>
-          <a href="/product1">Digital Beat Maker</a>
-          <a href="/product2">Guitar Tuner Pro</a>
-          <a href="/product3">Online Studio</a>
-          <a href="/product4">Custom Sound FX</a>
+          <h5 class="fw-bold">Produk Kami</h5>
+          <a href="{{ url('product-bolen') }}">Buat Musik Melalui Lirik</a>
+          <a href="{{ url('product-pastry') }}">Buat Musik Instrumen</a>
+        <a href="{{ url('product-kue-kering-500gr') }}">Buat Efek Suara</a>
         </div>
 
         <div class="col d-flex flex-column col-lg-3 col mt-lg-0 mt-5">
