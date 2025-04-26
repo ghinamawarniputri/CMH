@@ -9,49 +9,55 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav">
                     <li class="nav-item active">
-                        <a class="nav-link" href="{{ url('/') }}">Home <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="{{ url('/') }}">Beranda <span class="sr-only">(current)</span></a>
                     </li>
-                    <li class="nav-item dropdown active">
+                    <li class="nav-item dropdown ">
                         <a class="nav-link dropdown-toggle" href="{{ url('product')}}" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Produk
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="{{ url('product') }}">Semua Produk</a>
-                            <a class="dropdown-item" href="{{ url('product-bolen') }}">Bolen</a>
-                            <a class="dropdown-item" href="{{ url('product-pastry') }}">Pastry</a>
-                            <a class="dropdown-item" href="{{ url('product-kue-kering-500gr') }}">Kue Kering 500gr</a>
-                            <a class="dropdown-item" href="{{ url('product-kue-kering-250gr') }}">Kue Kering 250gr</a>
-                            <a class="dropdown-item" href="{{ url('product-hampers') }}">Hampers</a>
-                            <a class="dropdown-item" href="{{ url('product-snack-dan-catering') }}">Snack dan Catering</a>
+                            <a class="dropdown-item" href="{{ url('product-bolen') }}">BUAT MUSIK MELALUI LIRIK</a>
+                            <a class="dropdown-item" href="{{ url('product-pastry') }}">BUAT MUSIK INSTRUMEN</a>
+                            <a class="dropdown-item" href="{{ url('product-kue-kering-500gr') }}">BUAT EFEK SUARA</a>
                         </div>
                     </li>
-                    <li class="nav-item dropdown active">
+                    <li class="nav-item dropdown ">
                         <a class="nav-link dropdown-toggle" href="{{ url('product')}}" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Katalog Produk
+                            Dukungan
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a target="_blank" class="dropdown-item" href="{{ url('/katalog/Katalog Bolen dan Kue Kering.pdf') }}">Katalog Bolen dan Kue Kering</a>
-                            <a target="_blank" class="dropdown-item" href="{{ url('/katalog/Katalog Dapoer Catering SR.pdf') }}">Katalog Dapoer Catering SR</a>
+                            <a class="nav-link" href="{{ url('contact')}}">HUBUNGI KAMI</a>
+                            <a target="_blank" class="dropdown-item" href="{{ url('/katalog/Katalog Dapoer Catering SR.pdf') }}">INSTAGRAM</a>
                         </div>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ url('about')}}">Tentang Kami</a>
+                        <a class="nav-link" href="{{ url('about')}}">PORTOFOLIO</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ url('contact')}}">Kontak Kami</a>
-                    </li>
-                    @auth
                     <li class="nav-item">
                         <a class="nav-link" href="{{ url('admin') }}">Dashboard</a>
                     </li>
-                    @else
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ url('admin/login') }}">Log In</a>
+                        <button class="btn btn-primary" id="languageButton" onclick="toggleLanguage()">
+                            ID
+                        </button>
                     </li>
-                    @endauth
                 </ul>
             </div>
         </nav>
     </div>
 </header>
 <!-- end header section -->
+<script>
+    const languages = ['ID', 'EN', 'SD'];
+    let currentLanguageIndex = 0;
+
+    function toggleLanguage() {
+        currentLanguageIndex = (currentLanguageIndex + 1) % languages.length;
+        const languageButton = document.getElementById('languageButton');
+        if (languageButton) {
+            languageButton.textContent = languages[currentLanguageIndex];
+        }
+        // Hapus atau komentari baris ini untuk mencegah pengalihan halaman
+        // window.location.href = "{{ url('/change-language') }}/" + languages[currentLanguageIndex];
+    }
+</script>
