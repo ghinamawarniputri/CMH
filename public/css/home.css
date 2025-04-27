@@ -1,0 +1,134 @@
+:root {
+    --background: #0e1117;
+    --heading: #f2f2f2;
+    --card: #1c1f26;
+    --pink: #ff007f;
+    --text: #a1a1b0;
+    --shadow: 0px 4px 12px rgba(255, 0, 127, 0.4);
+}
+
+.hero_section {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    background-color: var(--background);
+}
+
+.video_bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.video_bg::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(14, 17, 23, 0.7);
+}
+
+#heroVideo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero_content {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    padding: 2rem 0;
+}
+
+.hero_title {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 3.5rem;
+    font-weight: 700;
+    text-align: left;
+    color: var(--heading);
+    line-height: 1.2;
+    margin-bottom: 2rem;
+    margin-left: -400px;
+    text-transform: uppercase;
+}
+
+.highlight {
+    color: var(--pink);
+}
+
+.sparkle {
+    font-size: 2.5rem;
+    margin-left: 0.5rem;
+    display: inline-block;
+    animation: sparkleAnimation 1.5s infinite;
+}
+
+.hero_text {
+    font-size: 1.2rem;
+    color: var(--text);
+    max-width: 600px;
+    margin-left: -400px;
+    line-height: 1.8;
+    text-align: justify;
+}
+
+.cta_button {
+    display: inline-block;
+    background: transparent;
+    color: var(--heading);
+    border: 2px solid var(--pink);
+    padding: 1rem 2.5rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-left: -1250px;
+    text-transform: uppercase;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.cta_button:hover {
+    background: var(--pink);
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: var(--shadow);
+    text-decoration: none;
+}
+
+.cta_button i {
+    margin-left: 0.5rem;
+}
+
+@keyframes sparkleAnimation {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.2);
+        opacity: 0.8;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero_title {
+        font-size: 3rem;
+    }
+
+    .hero_text {
+        font-size: 1rem;
+        padding: 0 1rem;
+    }
+
+    .cta_button {
+        padding: 0.8rem 2rem;
+        font-size: 1rem;
+    }
+}

@@ -1,33 +1,36 @@
 @extends('layouts.app')
 
 @section('content')
-<!-- slider section -->
-<section class="slider_section ">
-    <div class="slider_bg_box">
-        <img src="{{ asset('vendor/images/hero-bg.jpeg')}}" alt="Hero Background">
+<section class="hero_section">
+    <div class="video_bg">
+        <video autoplay muted loop id="heroVideo">
+            <source src="{{ asset('videos/video.mp4') }}" type="video/mp4">
+        </video>
     </div>
-    <div id="customCarousel1" class="carousel slide" data-ride="carousel">
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <div class="container ">
-                    <div class="row">
-                        <div class="col-md-7 col-lg-6 ">
-                            <div class="detail-box">
-                                <h1>
-                                    B&C Cookies Bandung
-                                </h1>
-                                <p>
-                                    Freshly Baked by Mahasiswa
-                                </p>
-                            </div>
-                        </div>
-                    </div>
+    <div class="hero_content">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 mx-auto text-center">
+                    <h1 class="hero_title">
+                        Ciptakan <br>
+                        Musikmu Dalam <br>
+                        Hitungan <span class="highlight">Detik</span>
+                        <span class="sparkle">✨</span>
+                    </h1>
+                    <p class="hero_text">
+                        Jadikan inspirasimu sebuah mahakarya dengan AI canggih.
+                        Tanpa perlu studio mahal, cukup unggah ide musikmu, dan
+                        biarkan AI kami menyulapnya menjadi melodi artistik serta
+                        aransemen profesional dalam hitungan menit.
+                    </p>
+                    <a href="#" class="cta_button">
+                        COBA SEKARANG ->
+                    </a>
                 </div>
             </div>
         </div>
     </div>
 </section>
-<!-- end slider section -->
 
 <!-- why section -->
 <section class="catalog w-100 min-vh-100">
@@ -176,4 +179,5 @@
 </section>
 
 <!-- end portfolios section -->
+
 @endsection

@@ -5,6 +5,8 @@ use App\Models\Category;
 use App\Models\Portfolio;
 use App\Http\Controllers\PortfolioController;
 use App\Http\Controllers\LocalizationController;
+use Illuminate\Http\Request;
+use App\Http\Controllers\PaymentController;
 
 
 /*
@@ -18,7 +20,23 @@ use App\Http\Controllers\LocalizationController;
 |
 */
 
+Route::post('/payment-process', function (Request $request) {
+    // Sementara hanya return data untuk tes
+    return 'Pembayaran diproses untuk produk: ' . $request->input('name');
+})->name('payment.process');
+
+
+Route::post('/payment-process', [PaymentController::class, 'process'])->name('payment.process');
+
+
+
 Route::get('/change-language/{lang}', [LocalizationController::class, 'changeLanguage'])->name('change-language');
+
+Route::get('/checkout', function (Illuminate\Http\Request $request) {
+    $product = $request->only(['id', 'name', 'price', 'category']);
+    return view('checkout', compact('product'));
+})->name('checkout');
+
 
 Route::get('/portfolio', [PortfolioController::class, 'index'])->name('portfolio');
 
@@ -43,40 +61,17 @@ Route::get('/product', function () {
     return view('product', $data);
 });
 
-Route::get('/musik-lirik', function () {
-    return view('musik-lirik');
+Route::get('/produk-lirik', function () {
+    return view('produk-lirik');
 });
 
-Route::get('/musik-instrumen', function () {
-    return view('musik-instrumen');
+Route::get('/produk-instrumen', function () {
+    return view('produk-instrumen');
 });
 
-Route::get('/sound-effect', function () {
-    return view('sound-effect');
+Route::get('/produk-efek', function () {
+    return view('produk-efek');
 });
-// Route::get('/product-bolen', function () {
-//     $products = \App\Models\Product::where('visibility', true)
-//         ->where('category_id', 1)
-//         ->get();
-//     $data = compact('products');
-//     return view('product-bolen', $data);
-// });
-
-// Route::get('/product-pastry', function () {
-//     $products = \App\Models\Product::where('visibility', true)
-//         ->where('category_id', 2)
-//         ->get();
-//     $data = compact('products');
-//     return view('product-pastry', $data);
-// });
-
-// Route::get('/product-kue-kering-500gr', function () {
-//     $products = \App\Models\Product::where('visibility', true)
-//         ->where('category_id', 3)
-//         ->get();
-//     $data = compact('products');
-//     return view('product-kue-kering-500gr', $data);
-// });
 
 Route::get('/product-kue-kering-250gr', function () {
     $products = \App\Models\Product::where('visibility', true)

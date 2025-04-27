@@ -1,159 +1,204 @@
-.product-wrapper {
-    padding-top: 20px;
-    padding-bottom: 20px;
+:root {
+    --background: #0e1117;
+    --heading: #f2f2f2;
+    --card: #1c1f26;
+    --pink: #ff007f;
+    --text: #a1a1b0;
+    --shadow: 0px 4px 12px rgba(255, 0, 127, 0.4);
 }
 
-.music-container {
-    background-color: #f8f9fa;
-    padding: 20px;
-    border-radius: 10px;
+.produk-lirik{
+    background-color: var(--background);
 }
 
-.image-section {
-    position: relative;
-    margin-bottom: 20px;
-}
-
-.music-image {
-    width: 100%;
-    border-radius: 10px;
-}
-
-.image-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    border-radius: 10px;
+.hero-section {
+    background-color: var(--background);
+    min-height: 100vh;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
     align-items: center;
-    opacity: 0;
-    transition: opacity 0.3s ease;
+    position: relative;
+    overflow: hidden;
 }
 
-.image-overlay:hover {
-    opacity: 1;
+.hero-section::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    background-image: url('../img/Frame1.png');
+    background-size: cover;
+    background-position: center;
 }
 
-.overlay-content {
-    text-align: center;
-    color: white;
+.container {
+    position: relative;
+    z-index: 2;
+}
+
+.left-section {
+    padding: 2rem;
+    color: var(--heading);
+    align-items: center;
 }
 
 .song-title {
-    font-size: 24px;
-    margin-bottom: 10px;
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    color: var(--heading);
 }
 
 .music-controls {
     display: flex;
-    gap: 10px;
-    margin-bottom: 15px;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    align-items: center;
 }
 
-.music-controls button {
-    padding: 8px 16px;
-    border-radius: 5px;
-    background-color: rgba(255, 255, 255, 0.7);
-    color: #333;
-    border: none;
+.control-btn {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid var(--heading);
+    background: transparent;
+    color: var(--heading);
+    display: flex;
+    align-items: center;
+    justify-content: center;
     cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.control-btn:hover {
+    background: var(--heading);
+    color: var(--background);
+}
+
+.control-btn i {
+    font-size: 1.2rem;
 }
 
 .download-btn {
-    background-color: #28a745 !important;
-    color: white !important;
-    padding: 10px 20px;
+    background: var(--pink);
+    color: white;
+    border: none;
+    padding: 0.8rem 2rem;
     border-radius: 5px;
-    text-decoration: none;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
 
-.music-section {
-    padding-left: 20px;
-    padding-right: 20px;
+.download-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow);
 }
 
-.inspiration-title {
-    font-size: 20px;
-    color: #0c4a6e;
+.right-section {
+    color: var(--heading);
+}
+
+.main-title {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    line-height: 1.2;
+    font-family: 'Rajdhani', sans-serif;
+}
+
+.highlight {
+    color: var(--pink);
 }
 
 .inspiration-text {
-    font-size: 16px;
-    line-height: 1.5;
-    color: #374151;
+    color: var(--text);
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    font-style: italic;
+    text-align: center;
+    font-family: 'inter', sans-serif;
 }
 
-.ai-title {
-    font-size: 18px;
-    color: #0c4a6e;
-}
-
-.lyric-input-container {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    margin-top: 20px;
-}
-
-.form-lyric {
-    display: block;
-    width: 100%;
-    padding: 0.375rem 0.75rem;
-    font-size: 1rem;
-    font-weight: 400;
-    line-height: 1.5;
-    color: #212529;
-    background-color: #fff;
-    background-clip: padding-box;
-    border: 1px solid #ced4da;
-    border-radius: 0.375rem;
-    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-    min-height: 120px;
-    resize: vertical;
-}
-
-.create-btn {
-    padding: 0.375rem 0.75rem;
-    border-radius: 0.375rem;
-    background-color: #007bff;
-    color: #fff;
-    cursor: pointer;
-    border: 1px solid #007bff;
-}
-
-.text-center {
+.form-title {
+    font-size: 1.2rem;
+    color: var(--heading);
+    margin-bottom: 2rem;
+    letter-spacing: 1px;
     text-align: center;
 }
 
-.py-5 {
-    padding-top: 3rem !important;
-    padding-bottom: 3rem !important;
-}
-
-.row {
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: calc(var(--bs-gutter-y) * -1);
-    margin-right: calc(var(--bs-gutter-x) / -2);
-    margin-left: calc(var(--bs-gutter-x) / -2);
-}
-
-.col {
-    flex: 1 0 auto;
+.lyric-input-container {
+    position: relative;
     width: 100%;
 }
 
-@media (min-width: 768px) {
-    .col-md-6 {
-        flex: 0 0 auto;
-        width: 50%;
+.lyric-input {
+    width: 100%;
+    min-height: 150px;
+    padding: 1rem;
+    background-color: var(--card);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    color: var(--text);
+    font-size: 1rem;
+    resize: none;
+}
+
+.lyric-input:focus {
+    outline: none;
+    border-color: var(--pink);
+}
+
+.create-btn {
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    background-color: var(--pink);
+    color: white;
+    border: none;
+    padding: 0.5rem 2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.create-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow);
+}
+
+@media (max-width: 768px) {
+    .hero-section::before {
+        width: 100%;
+        opacity: 0.2;
     }
-    .music-section {
-        padding-left: 0;
+
+    .hero-section {
+        padding: 2rem 0;
+    }
+
+    .song-title {
+        font-size: 2.5rem;
+    }
+
+    .main-title,
+    .sub-title {
+        font-size: 2rem;
+    }
+
+    .inspiration-text {
+        font-size: 1rem;
+    }
+
+    .music-controls {
+        justify-content: center;
+    }
+
+    .left-section,
+    .right-section {
+        text-align: center;
     }
 }

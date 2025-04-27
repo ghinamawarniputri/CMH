@@ -1,5 +1,4 @@
-/* :root {
-    --nav-color: #0e0b13;
+:root {
     --background: #0e1117;
     --heading: #f2f2f2;
     --card: #1c1f26;
@@ -9,7 +8,136 @@
 }
 
 .header_section {
-    background-color: var(--nav-color);
+    background-color: var(--background);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 999;
+    padding: 15px 0;
+}
+
+.navbar {
+    padding: 0;
+}
+
+.navbar-brand img {
+    height: 50px;
+}
+
+.custom_nav-container {
+    padding: 0 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.navbar-nav {
+    margin-left: auto;
+    align-items: center;
+}
+
+.nav-item {
+    margin: 0 15px;
+}
+
+.nav-link {
+    color: var(--heading) !important;
+    font-size: 1rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 5px 0;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+    color: var(--pink) !important;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: var(--pink);
+    left: 0;
+    bottom: 0;
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+.dropdown-menu {
+    background: var(--background);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    padding: 0.5rem 0;
+    min-width: 200px;
+    margin-top: 10px;
+}
+
+.dropdown-item {
+    color: var(--text);
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.dropdown-item:hover {
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--pink);
+}
+
+#languageButton {
+    background: transparent;
+    border: 2px solid var(--pink);
     color: var(--heading);
-    padding: 1.5rem 0;
-} */
+    padding: 5px 15px;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    margin-left: 15px;
+}
+
+#languageButton:hover {
+    background: var(--pink);
+    color: white;
+}
+
+.navbar-toggler {
+    border: none;
+    padding: 0;
+}
+
+.navbar-toggler:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+@media (max-width: 991px) {
+    .custom_nav-container {
+        padding: 0 1rem;
+    }
+
+    .navbar-nav {
+        padding: 0.5rem 0;
+    }
+
+    .nav-item {
+        margin: 5px 0;
+    }
+
+    .dropdown-menu {
+        background: transparent;
+        border: none;
+        padding: 0;
+        margin-top: 0;
+    }
+
+    .dropdown-item {
+        padding: 0.5rem 0;
+    }
+}

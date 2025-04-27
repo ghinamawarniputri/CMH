@@ -1,3 +1,5 @@
+
+
 <footer class="footer">
     <div class="container">
       <div class="row d-flex justify-content-between">
@@ -30,9 +32,9 @@
 
         <div class="col d-flex flex-column col-lg-4 col mt-lg-0 mt-5">
           <h5 class="fw-bold">Produk Kami</h5>
-          <a href="{{ url('product-bolen') }}">Buat Musik Melalui Lirik</a>
-          <a href="{{ url('product-pastry') }}">Buat Musik Instrumen</a>
-        <a href="{{ url('product-kue-kering-500gr') }}">Buat Efek Suara</a>
+          <a href="{{ url('produk-lirik') }}">Buat Musik Melalui Lirik</a>
+          <a href="{{ url('produk-instrumen') }}">Buat Musik Instrumen</a>
+        <a href="{{ url('produk-efek') }}">Buat Efek Suara</a>
         </div>
 
         <div class="col d-flex flex-column col-lg-3 col mt-lg-0 mt-5">

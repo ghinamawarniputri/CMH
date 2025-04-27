@@ -1,0 +1,226 @@
+:root {
+    --background: #0e1117;
+    --heading: #f2f2f2;
+    --card: #1c1f26;
+    --pink: #ff007f;
+    --text: #a1a1b0;
+    --shadow: 0px 4px 12px rgba(255, 0, 127, 0.4);
+}
+
+.price-list {
+    padding: 4rem 2rem;
+    background-color: var(--background);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.price-list .text-2xl {
+    font-size: 2rem;
+    line-height: 2.5rem;
+    color: var(--heading);
+    font-weight: bold;
+}
+
+.price-list .mb-6 {
+    margin-bottom: 1.5rem;
+}
+
+.price-list .text-center {
+    text-align: center;
+}
+
+.price-list .grid {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.price-list .grid-cols-1 {
+    width: 100%;
+    max-width: 400px;
+}
+
+.price-list .gap-8 {
+    gap: 2rem;
+}
+
+.price-list .border {
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.price-list .rounded-lg {
+    border-radius: 0.5rem;
+}
+
+.price-list .p-6 {
+    padding: 1.5rem;
+}
+
+.price-list .shadow-md {
+    box-shadow: var(--shadow);
+}
+
+.price-list .flex {
+    display: flex;
+}
+
+.price-list .flex-col {
+    flex-direction: column;
+}
+
+.price-list .items-center {
+    align-items: center;
+}
+
+.price-list .w-full {
+    width: 100%;
+}
+
+.price-list .h-40 {
+    height: 10rem;
+}
+
+.price-list .object-cover {
+    object-fit: cover;
+}
+
+.price-list .mb-4 {
+    margin-bottom: 1rem;
+}
+
+.price-list .rounded {
+    border-radius: 0.375rem;
+}
+
+.price-list .text-lg {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    color: var(--heading);
+}
+
+.price-list .font-semibold {
+    font-weight: 600;
+}
+
+.price-list .mb-2 {
+    margin-bottom: 0.5rem;
+}
+
+.price-list .text-sm {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+}
+
+.price-list .text-gray-600 {
+    color: var(--text);
+}
+
+.price-list .text-gray-700 {
+    color: var(--text);
+    opacity: 0.8;
+}
+
+.price-list .text-xl {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    color: var(--heading);
+}
+
+.price-list .font-bold {
+    font-weight: 700;
+}
+
+/* Card Styling */
+.price-list .border.rounded-lg {
+    width: 100%;
+    background-color: var(--card);
+    transition: transform 0.3s ease;
+}
+
+.price-list .border.rounded-lg:hover {
+    transform: translateY(-5px);
+}
+
+/* Button Styling */
+.price-list .bg-green-500 {
+    background-color: var(--background);
+    transition: background-color 0.3s ease;
+}
+
+.price-list .hover\:bg-green-600:hover {
+    background-color: var(--pink);
+}
+
+.price-list .text-white {
+    color: white;
+}
+
+.price-list .py-2 {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+.price-list .px-4 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+/* Feature List Styling */
+.price-list ul {
+    list-style: none;
+    padding-left: 0;
+    width: 100%;
+}
+
+.price-list li {
+    margin-bottom: 0.5rem;
+    color: var(--text);
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+    .price-list .md\:grid-cols-3 {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .price-list {
+        padding: 2rem 1rem;
+    }
+
+    .price-list .grid {
+        padding: 0 1rem;
+    }
+
+    .price-list .grid-cols-1 {
+        max-width: 350px;
+    }
+
+    .price-list .gap-8 {
+        gap: 1.5rem;
+    }
+
+    .price-list .text-2xl {
+        font-size: 1.75rem;
+    }
+}
+
+/* Animation */
+@keyframes priceListFadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.price-list .border.rounded-lg {
+    animation: priceListFadeInUp 0.5s ease-out forwards;
+}
+

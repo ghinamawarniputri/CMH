@@ -2,6 +2,22 @@
 @section('title', 'Portfolio')
 
 @section('content')
+<style>
+.container.py-5 {
+    padding-top: 180px !important;
+    background-color: #0e1117;
+    min-height: 100vh;
+}
+
+h1.text-center {
+    color: var(--heading);
+    font-family: "Rajdhani", sans-serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+}
+</style>
+
 <section class="container py-5">
     <h1 class="text-center mb-4">🎼 Portfolio 🎼</h1>
 
