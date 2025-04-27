@@ -42,24 +42,19 @@
 
 <div class="product-desc">
     <div class="text-section pe-4">
-        <h2 class="product-title">@yield('product_title')</h2>
-        <p class="product-description">
-            @yield('product_description1')
-        </p>
-        <p class="product-description">
-            @yield('product_description2')
-        </p>
-        <p class="product-description">
-            @yield('product_description3')
-        </p>
+        <h2 class="product-title">{{ $product_title }}</h2>
+        <p class="product-description">{{ $product_description1 }}</p>
+        <p class="product-description">{{ $product_description2 }}</p>
+        <p class="product-description">{{ $product_description3 }}</p>
     </div>
     <div class="image-section">
         <img
-            src="@yield('product_image', 'your-image-url.jpg')"
-            alt="@yield('product_image_alt', 'Gambar Produk')"
+            src="{{ asset($product_image ?? 'your-image-url.jpg') }}"
+            alt="{{ $product_image_alt ?? 'Gambar Produk') }}"
             class="product-image"
         />
     </div>
 </div>
+
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>

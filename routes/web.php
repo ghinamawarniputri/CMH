@@ -5,6 +5,8 @@ use App\Models\Category;
 use App\Models\Portfolio;
 use App\Http\Controllers\PortfolioController;
 use App\Http\Controllers\LocalizationController;
+use Illuminate\Http\Request;
+use App\Http\Controllers\PaymentController;
 
 
 /*
@@ -18,7 +20,23 @@ use App\Http\Controllers\LocalizationController;
 |
 */
 
+Route::post('/payment-process', function (Request $request) {
+    // Sementara hanya return data untuk tes
+    return 'Pembayaran diproses untuk produk: ' . $request->input('name');
+})->name('payment.process');
+
+
+Route::post('/payment-process', [PaymentController::class, 'process'])->name('payment.process');
+
+
+
 Route::get('/change-language/{lang}', [LocalizationController::class, 'changeLanguage'])->name('change-language');
+
+Route::get('/checkout', function (Illuminate\Http\Request $request) {
+    $product = $request->only(['id', 'name', 'price', 'category']);
+    return view('checkout', compact('product'));
+})->name('checkout');
+
 
 Route::get('/portfolio', [PortfolioController::class, 'index'])->name('portfolio');
 
@@ -45,6 +63,14 @@ Route::get('/product', function () {
 
 Route::get('/produk-lirik', function () {
     return view('produk-lirik');
+});
+
+Route::get('/produk-instrumen', function () {
+    return view('produk-instrumen');
+});
+
+Route::get('/produk-efek', function () {
+    return view('produk-efek');
 });
 
 Route::get('/product-pastry', function () {
