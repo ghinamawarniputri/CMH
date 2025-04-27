@@ -16,7 +16,7 @@
                             Produk
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="{{ url('product-bolen') }}">BUAT MUSIK MELALUI LIRIK</a>
+                            <a class="dropdown-item" href="{{ url('produk-lirik') }}">BUAT MUSIK MELALUI LIRIK</a>
                             <a class="dropdown-item" href="{{ url('product-pastry') }}">BUAT MUSIK INSTRUMEN</a>
                             <a class="dropdown-item" href="{{ url('product-kue-kering-500gr') }}">BUAT EFEK SUARA</a>
                         </div>

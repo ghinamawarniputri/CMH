@@ -18,7 +18,7 @@
     <meta property="og:image" content="{{ asset('vendor/images/title-logo.png')}}" />
     <meta property="og:url" content="{{ env('APP_URL') }}" />
     <link rel="shortcut icon" href="{{ asset('vendor/images/title-logo.png') }}">
-    <title>Home - B&C Cookies</title>
+    <title>@yield("title")</title>
     <!-- bootstrap core css -->
     <link rel="stylesheet" type="text/css" href="{{ asset('vendor/css/bootstrap.css')}}" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css" integrity="sha384-b6lVK+yci+bfDmaY1u0zE8YYJt0TZxLEAFyYSLHId4xoVvsrQu3INevFKo+Xir8e" crossorigin="anonymous">
@@ -39,6 +39,7 @@
         @yield('content')
     </div>
 
+    @include('partials.faquser')
     @include('partials.footer')
 
     <!-- jQery -->

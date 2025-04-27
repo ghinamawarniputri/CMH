@@ -43,12 +43,8 @@ Route::get('/product', function () {
     return view('product', $data);
 });
 
-Route::get('/product-bolen', function () {
-    $products = \App\Models\Product::where('visibility', true)
-        ->where('category_id', 1)
-        ->get();
-    $data = compact('products');
-    return view('product-bolen', $data);
+Route::get('/produk-lirik', function () {
+    return view('produk-lirik');
 });
 
 Route::get('/product-pastry', function () {
