@@ -16,9 +16,9 @@
                             Produk
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="{{ url('product-bolen') }}">BUAT MUSIK MELALUI LIRIK</a>
-                            <a class="dropdown-item" href="{{ url('product-pastry') }}">BUAT MUSIK INSTRUMEN</a>
-                            <a class="dropdown-item" href="{{ url('product-kue-kering-500gr') }}">BUAT EFEK SUARA</a>
+                            <a class="dropdown-item" href="{{ url('musik-lirik') }}">BUAT MUSIK MELALUI LIRIK</a>
+                            <a class="dropdown-item" href="{{ url('musik-instrumen') }}">BUAT MUSIK INSTRUMEN</a>
+                            <a class="dropdown-item" href="{{ url('sound-effect') }}">BUAT EFEK SUARA</a>
                         </div>
                     </li>
                     <li class="nav-item dropdown ">
@@ -31,7 +31,7 @@
                         </div>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ url('about')}}">PORTOFOLIO</a>
+                        <a class="nav-link" href="{{ url('portfolio')}}">PORTOFOLIO</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{{ url('admin') }}">Dashboard</a>

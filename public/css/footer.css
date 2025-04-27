@@ -1,29 +1,58 @@
-/* footer */
+:root {
+    --background: #0e1117;
+    --heading: #f2f2f2;
+    --card: #1c1f26;
+    --pink: #ff007f;
+    --text: #a1a1b0;
+    --shadow: 0px 4px 12px rgba(255, 0, 127, 0.4);
+}
+
 .footer {
     padding-top: 50px;
     width: 100%;
     min-height: 60vh;
-    background: #000; /* Mengubah background menjadi hitam */
+    background-color: var(--background);
+}
+
+.footer .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.footer .col {
+    flex: 1;
+    min-width: 250px;
+    padding: 0 15px;
 }
 
 .footer .row:nth-child(1) .col:nth-child(1) h3 {
     color: var(--heading);
     font-size: 40px;
     font-family: "Rajdhani", sans-serif;
+    margin-bottom: 20px;
 }
 
 .footer .row:nth-child(1) .col:nth-child(1) .desc {
-    color: #a1a1b0;
+    color: var(--text);
     font-size: 14px;
-    line-height: 2;
+    line-height: 1.6;
     font-family: "Inter", sans-serif;
+    max-width: 300px;
+    margin-bottom: 15px;
 }
 
 .footer .no a,
 .footer .mail a {
     display: flex;
     align-items: center;
-    color: #a1a1b0;
+    color: var(--text);
     column-gap: 5px;
     font-size: 14px;
     font-family: "Inter", sans-serif;
@@ -31,7 +60,7 @@
 
 .footer .no a:hover,
 .footer .mail a:hover {
-    color: #ff007f;
+    color: var(--pink);
     transition: all 0.3s ease;
 }
 
@@ -43,9 +72,9 @@
 .footer .social i {
     /* Corrected selector to target fontawesome icons */
     font-size: 20px;
-    color: white;
+    color: var(--heading);
     cursor: pointer;
-    background: #141414;
+    background: var(--background);
     padding: 10px;
     border-radius: 50%;
     width: 20px;
@@ -55,32 +84,35 @@
 
 .footer .social i:hover {
     /* Corrected selector to target fontawesome icons */
-    color: #ff007f;
+    color: var(--pink);
     transition: all 0.3s ease;
 }
 
 .footer .row:nth-child(1) .col:nth-child(2) {
+    display: flex;
+    flex-direction: column;
     gap: 10px;
 }
 
 .footer .row:nth-child(1) .col:nth-child(2) h5 {
     color: var(--heading);
     font-family: "Rajdhani", sans-serif;
-    border-bottom: 1px solid #ff007f;
+    border-bottom: 1px solid var(--pink);
     width: 150px;
     padding-bottom: 10px;
     margin-bottom: 15px;
 }
 
 .footer .row:nth-child(1) .col:nth-child(2) a {
-    color: #a1a1b0;
+    color: var(--text);
     text-decoration: none;
     font-size: 14px;
     font-family: "Inter", sans-serif;
+    margin-bottom: 8px;
 }
 
 .footer .row:nth-child(1) .col:nth-child(2) a:hover {
-    color: #ff007f;
+    color: var(--pink);
     transition: all 0.3s ease;
 }
 
@@ -91,24 +123,24 @@
 }
 
 .footer .row:nth-child(1) .col:nth-child(3) a {
-    color: #a1a1b0;
+    color: var(--text);
     text-decoration: none;
     font-size: 14px;
     font-family: "Inter", sans-serif;
 }
 
 .footer .row:nth-child(1) .col:nth-child(3) a:hover {
-    color: #ff007f;
+    color: var(--pink);
     transition: all 0.3s ease;
 }
 
 .footer .row:nth-child(2) {
-    color: #fff;
+    color: var(--heading);
     margin-top: 100px;
 }
 
 .footer .footer-links a {
-    color: #a1a1b0;
+    color: var(--text);
     text-decoration: none;
     position: relative;
     margin: 0 50px;
@@ -121,7 +153,7 @@
     height: 1px;
     bottom: -2px;
     left: 0;
-    background-color: #ff007f;
+    background-color: var(--pink);
     transform: scaleX(0);
     transition: transform 0.3s ease;
 }
@@ -131,11 +163,11 @@
 }
 
 .footer .footer-links a:hover {
-    color: #a1a1b0;
+    color: var(--text);
 }
 
 .pengunjung {
-    color: #a1a1b0;
+    color: var(--text);
     font-family: "Rajdhani", sans-serif;
     font-weight: 600;
     padding: 0 8px;
@@ -147,7 +179,7 @@
 }
 
 .pengunjung:hover {
-    color: #ff007f;
+    color: var(--pink);
 }
 
 /* Support */

@@ -1,18 +1,18 @@
-@extends('layouts.app') <!-- Update with your layout -->
+@extends('layouts.app')
 @section('title', 'Portfolio')
 
 @section('content')
 <section class="container py-5">
     <h1 class="text-center mb-4">🎼 Portfolio 🎼</h1>
 
-    <div class="row mb-4 text-center">
+    <div class="d-flex flex-wrap justify-content-center mb-4 gap-2">
         @php
             $genres = ['All', 'Accoustic', 'Dubstep', 'Jazz', 'Pop', 'Progressive', 'Sundanese'];
         @endphp
         @foreach ($genres as $genre)
-            <div class="col">
-                <button class="btn btn-outline-dark m-1 filter-btn" data-genre="{{ $genre }}">{{ $genre }}</button>
-            </div>
+            <button class="btn btn-outline-dark filter-btn" data-genre="{{ $genre }}">
+                {{ $genre }}
+            </button>
         @endforeach
     </div>
 

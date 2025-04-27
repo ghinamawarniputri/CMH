@@ -43,29 +43,40 @@ Route::get('/product', function () {
     return view('product', $data);
 });
 
-Route::get('/product-bolen', function () {
-    $products = \App\Models\Product::where('visibility', true)
-        ->where('category_id', 1)
-        ->get();
-    $data = compact('products');
-    return view('product-bolen', $data);
+Route::get('/musik-lirik', function () {
+    return view('musik-lirik');
 });
 
-Route::get('/product-pastry', function () {
-    $products = \App\Models\Product::where('visibility', true)
-        ->where('category_id', 2)
-        ->get();
-    $data = compact('products');
-    return view('product-pastry', $data);
+Route::get('/musik-instrumen', function () {
+    return view('musik-instrumen');
 });
 
-Route::get('/product-kue-kering-500gr', function () {
-    $products = \App\Models\Product::where('visibility', true)
-        ->where('category_id', 3)
-        ->get();
-    $data = compact('products');
-    return view('product-kue-kering-500gr', $data);
+Route::get('/sound-effect', function () {
+    return view('sound-effect');
 });
+// Route::get('/product-bolen', function () {
+//     $products = \App\Models\Product::where('visibility', true)
+//         ->where('category_id', 1)
+//         ->get();
+//     $data = compact('products');
+//     return view('product-bolen', $data);
+// });
+
+// Route::get('/product-pastry', function () {
+//     $products = \App\Models\Product::where('visibility', true)
+//         ->where('category_id', 2)
+//         ->get();
+//     $data = compact('products');
+//     return view('product-pastry', $data);
+// });
+
+// Route::get('/product-kue-kering-500gr', function () {
+//     $products = \App\Models\Product::where('visibility', true)
+//         ->where('category_id', 3)
+//         ->get();
+//     $data = compact('products');
+//     return view('product-kue-kering-500gr', $data);
+// });
 
 Route::get('/product-kue-kering-250gr', function () {
     $products = \App\Models\Product::where('visibility', true)
@@ -102,6 +113,8 @@ Route::get('/about', function () {
 Route::get('/contact', function () {
     return view('contact');
 });
+
+
 
 Route::post('/auth/logout', [\App\Http\Controllers\Filament\LogoutController::class, 'logout'])->name('filament.admin.auth.logout');
 

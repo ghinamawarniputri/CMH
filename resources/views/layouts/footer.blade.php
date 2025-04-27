@@ -6,8 +6,6 @@
           <p class="desc">
             <i class="fa-solid fa-location-dot" style="margin-right: 8px;"></i>
         Komplek Bandung Indah Raya, Blok C13/No.17, Kelurahan Mekarjaya, Kecamatan Rancasari, Kota Bandung, Jawa Barat 40286
-
-
           </p>
           <div class="no mb-1 mt-2">
             <a href="#">

@@ -132,19 +132,18 @@
 <!-- end why section -->
 
 <!-- portfolios section -->
-<section class="bg-dark text-light py-5">
+<section class="portfolio-section">
     <div class="container">
         <h2 class="text-center mb-4">
-            🎼 <span style="color: #ff3399;">Portofolio</span> 🎼
+            🎼 <span class="highlight">Portofolio</span> 🎼
         </h2>
         <div id="portfolioCarousel" class="carousel slide" data-bs-ride="carousel">
-            <!-- carousel content section -->
             <div class="carousel-inner">
                 @foreach ($portfolios->chunk(3) as $chunkIndex => $chunk)
                 <div class="row mb-4">
                     @foreach ($chunk as $item)
                     <div class="col-md-4">
-                        <div class="card bg-dark text-light shadow-sm">
+                        <div class="card portfolio-card">
                             <div class="card-body">
                                 <h5 class="card-title">{{ $item->name }}</h5>
                                 <p class="card-text"><em>{{ $item->genre }}</em></p>
@@ -165,16 +164,16 @@
             </div>
 
             <button class="carousel-control-prev" type="button" data-bs-target="#portfolioCarousel" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon bg-dark rounded-circle" aria-hidden="true"></span>
+                <span class="carousel-control-prev-icon custom-carousel-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Previous</span>
             </button>
             <button class="carousel-control-next" type="button" data-bs-target="#portfolioCarousel" data-bs-slide="next">
-                <span class="carousel-control-next-icon bg-dark rounded-circle" aria-hidden="true"></span>
+                <span class="carousel-control-next-icon custom-carousel-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Next</span>
             </button>
-            <!-- end of carousel content section -->
         </div>
     </div>
 </section>
+
 <!-- end portfolios section -->
 @endsection

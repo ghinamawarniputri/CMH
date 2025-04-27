@@ -30,6 +30,11 @@
     <link href="{{ asset('vendor/css/responsive.css')}}" rel="stylesheet" />
     <link rel="stylesheet" type="text/css" href="{{ asset('vendor/css/custome.css')}}">
     <link rel="stylesheet" href="{{ asset('css/produk.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/footer.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/portfolioslide.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/produk1.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/portfolio.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/header.css') }}">
 </head>
 
 <body>
