@@ -103,9 +103,9 @@
 .instrumen-btn:hover {
     transform: translateY(-3px);
     box-shadow: var(--shadow);
-    color: var(--background);
+    color: var(--heading);
     background: var(--pink);
-    border: 2px solid var(--background);
+    border: 2px solid var(--pink);
 }
 
 @keyframes instrumentSwing {

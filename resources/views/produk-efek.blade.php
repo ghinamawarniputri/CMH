@@ -8,21 +8,10 @@
         <div class="efek-container">
             <div class="efek-content">
                 <h1 class="efek-title">Buat <span class="efek-highlight">Sound Effect</span> yang Meningkatkan Karya Musikmu <span class="efek-icon">🎧</span></h1>
-                
-                <div class="efek-steps">
-                    <div class="step-item">
-                        <img src="{{ asset('img/pict1.png') }}" alt="Buat" class="step-image">
-                        <h3>BUAT</h3>
-                    </div>
-                    <div class="step-item">
-                        <img src="{{ asset('img/pict2.png') }}" alt="Proses" class="step-image">
-                        <h3>PROSES</h3>
-                    </div>
-                    <div class="step-item">
-                        <img src="{{ asset('img/pict3.png') }}" alt="Hasil" class="step-image">
-                        <h3>HASIL</h3>
-                    </div>
-                </div>
+
+                <p class="efek-text">
+                    "Setiap momen dalam audio punya dampaknya. Tambahkan efek suara sinematik, alam, atau teknologi agar karya musikmu lebih hidup dan profesional."
+                </p>
 
                 <button class="efek-btn">BUAT SEKARANG</button>
             </div>
@@ -75,7 +64,6 @@
                     <x-price-list-product :products="[
                         [
                             'id' => 2,
-                            'image' => asset('images/catalog2.jpg'),
                             'name' => 'Buat Musik dengan Efek',
                             'description' => 'Tambah efek dan suara untuk memperkaya musikmu.',
                             'cta' => 'Pesan Sekarang',

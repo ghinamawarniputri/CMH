@@ -4,24 +4,23 @@
 
 @section('content')
 <div class="produk-lirik">
-    <div class="instrumen-hero">
-        <div class="instrumen-container">
-            <div class="instrumen-content">
-                <h1 class="instrumen-title">
-                    "Ekspresikan Perasaanmu Lewat <span class="instrumen-highlight">Lirik</span> dan <span class="instrumen-highlight">Musik</span> Buatanmu" <span class="instrumen-icon">🎶</span>
+    <div class="lirik-hero">
+        <div class="lirik-container">
+            <div class="lirik-content">
+                <h1 class="lirik-title">
+                    "Ekspresikan Perasaanmu Lewat <span class="lirik-highlight">Lirik</span> dan <span class="lirik-highlight">Musik</span> Buatanmu" <span class="lirik-icon">🎶</span>
                 </h1>
 
-                <p class="instrumen-text">
+                <p class="lirik-text">
                     "Dengar suara hujan, lihat matahari terbit, rasakan detak jantungmu. Setiap lagu besar dimulai dari satu kata sederhana. Tulis apa yang kamu rasakan. Musik ada di mana-mana."
                 </p>
 
 
-                <button class="instrumen-btn">Unduh Musik Anda</button>
+                <button class="lirik-btn">Unduh Musik Anda</button>
 
             </div>
         </div>
     </div>
-</div>
 
 
         <x-product-desc
@@ -49,7 +48,6 @@
                     <x-price-list-product :products="[
                         [
                             'id' => 1,
-                            'image' => asset('images/catalogImage1.jpg'),
                             'name' => 'Buat Musik dari Lirik',
                             'description' => 'Ubah lirikmu menjadi lagu yang indah.',
                             'cta' => 'Pesan Sekarang',
