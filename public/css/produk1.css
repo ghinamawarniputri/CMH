@@ -7,11 +7,11 @@
     --shadow: 0px 4px 12px rgba(255, 0, 127, 0.4);
 }
 
-.produk-lirik{
+.produk-lirik {
     background-color: var(--background);
 }
 
-.hero-section {
+.instrumen-hero {
     background-color: var(--background);
     min-height: 100vh;
     display: flex;
@@ -20,185 +20,111 @@
     overflow: hidden;
 }
 
-.hero-section::before {
-    content: '';
+.instrumen-hero::before {
+    content: "";
     position: absolute;
     left: 0;
     top: 0;
-    width: 50%;
+    width: 100%;
     height: 100%;
-    background-image: url('../img/Frame1.png');
+    background-image: url("../img/Frame2.png");
     background-size: cover;
     background-position: center;
 }
 
-.container {
+.instrumen-container {
     position: relative;
     z-index: 2;
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 4rem;
 }
 
-.left-section {
+.instrumen-content {
+    max-width: 600px;
+    text-align: left;
     padding: 2rem;
-    color: var(--heading);
-    align-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 0;
 }
 
-.song-title {
+.instrumen-title {
     font-size: 3rem;
     font-weight: bold;
-    margin-bottom: 2rem;
     color: var(--heading);
-}
-
-.music-controls {
-    display: flex;
-    gap: 1rem;
-    margin-bottom: 2rem;
-    align-items: center;
-}
-
-.control-btn {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    border: 2px solid var(--heading);
-    background: transparent;
-    color: var(--heading);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.control-btn:hover {
-    background: var(--heading);
-    color: var(--background);
-}
-
-.control-btn i {
-    font-size: 1.2rem;
-}
-
-.download-btn {
-    background: var(--pink);
-    color: white;
-    border: none;
-    padding: 0.8rem 2rem;
-    border-radius: 5px;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.download-btn:hover {
-    transform: translateY(-2px);
-    box-shadow: var(--shadow);
-}
-
-.right-section {
-    color: var(--heading);
-}
-
-.main-title {
-    font-size: 3rem;
-    font-weight: bold;
-    margin-bottom: 2rem;
     line-height: 1.2;
-    font-family: 'Rajdhani', sans-serif;
+    margin-bottom: 2rem;
+    font-family: "Rajdhani" !important;
+    text-align: left;
 }
 
-.highlight {
+.instrumen-highlight {
     color: var(--pink);
+    font-weight: bold;
 }
 
-.inspiration-text {
-    color: var(--text);
-    font-size: 0.9rem;
-    line-height: 1.6;
-    margin-bottom: 2rem;
-    font-style: italic;
-    text-align: center;
-    font-family: 'inter', sans-serif;
+.instrumen-icon {
+    font-size: 3rem;
+    display: inline-block;
+    margin-left: 0.5rem;
+    animation: instrumentSwing 2s ease-in-out infinite;
 }
 
-.form-title {
+.instrumen-text {
     font-size: 1.2rem;
-    color: var(--heading);
-    margin-bottom: 2rem;
-    letter-spacing: 1px;
-    text-align: center;
-}
-
-.lyric-input-container {
-    position: relative;
-    width: 100%;
-}
-
-.lyric-input {
-    width: 100%;
-    min-height: 150px;
-    padding: 1rem;
-    background-color: var(--card);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 8px;
     color: var(--text);
+    margin-bottom: 3rem;
+    font-style: italic;
+    max-width: 500px;
+    margin-left: 0;
+    margin-right: 0;
+    line-height: 1.6;
+    font-family: "inter" !important;
+    text-align: left;
+}
+
+.instrumen-btn {
+    background: var(--background);
+    color: var(--heading);
+    border: 2px solid var(--pink);
+    padding: 1rem 3rem;
     font-size: 1rem;
-    resize: none;
-}
-
-.lyric-input:focus {
-    outline: none;
-    border-color: var(--pink);
-}
-
-.create-btn {
-    position: absolute;
-    bottom: 1rem;
-    right: 1rem;
-    background-color: var(--pink);
-    color: white;
-    border: none;
-    padding: 0.5rem 2rem;
-    border-radius: 5px;
+    font-weight: bold;
+    border-radius: 10px;
     cursor: pointer;
     transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    align-self: flex-start;
 }
 
-.create-btn:hover {
-    transform: translateY(-2px);
+.instrumen-btn:hover {
+    transform: translateY(-3px);
     box-shadow: var(--shadow);
+    color: var(--background);
+    background: var(--pink);
+    border: 2px solid var(--background);
 }
 
+/* Responsive */
 @media (max-width: 768px) {
-    .hero-section::before {
-        width: 100%;
-        opacity: 0.2;
+    .instrumen-container {
+        padding: 0 2rem;
     }
 
-    .hero-section {
-        padding: 2rem 0;
-    }
-
-    .song-title {
+    .instrumen-title {
         font-size: 2.5rem;
     }
 
-    .main-title,
-    .sub-title {
-        font-size: 2rem;
-    }
-
-    .inspiration-text {
+    .instrumen-text {
         font-size: 1rem;
+        padding: 0;
     }
 
-    .music-controls {
-        justify-content: center;
-    }
-
-    .left-section,
-    .right-section {
-        text-align: center;
+    .instrumen-btn {
+        padding: 0.8rem 2rem;
+        font-size: 1rem;
     }
 }

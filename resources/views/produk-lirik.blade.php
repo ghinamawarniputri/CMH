@@ -4,38 +4,25 @@
 
 @section('content')
 <div class="produk-lirik">
-<div class="hero-section">
-    <div class="container">
-        <div class="row d-flex align-items-center">
-            <div class="col-md-6 left-section">
-                <h2 class="song-title">Lagu Ini Untukmu</h2>
-                <div class="music-controls">
-                    <button class="control-btn play-btn">
-                        <i class="fas fa-play"></i>
-                    </button>
-                    <button class="control-btn pause-btn">
-                        <i class="fas fa-pause"></i>
-                    </button>
-                    <button class="control-btn stop-btn">
-                        <i class="fas fa-stop"></i>
-                    </button>
-                </div>
-                <button class="download-btn">Unduh Musik Anda</button>
-            </div>
-            <div class="col-md-6 right-section">
-                <h1 class="main-title">Temukan <span class="highlight">Inspirasimu</span> di Sekitar, Mulailah dari Perasaanmu! ✍️</h1>
-                <p class="inspiration-text">
+    <div class="instrumen-hero">
+        <div class="instrumen-container">
+            <div class="instrumen-content">
+                <h1 class="instrumen-title">
+                    "Ekspresikan Perasaanmu Lewat <span class="instrumen-highlight">Lirik</span> dan <span class="instrumen-highlight">Musik</span> Buatanmu" <span class="instrumen-icon">🎶</span>
+                </h1>
+
+                <p class="instrumen-text">
                     "Dengar suara hujan, lihat matahari terbit, rasakan detak jantungmu. Setiap lagu besar dimulai dari satu kata sederhana. Tulis apa yang kamu rasakan. Musik ada di mana-mana."
                 </p>
-                <h3 class="form-title">DAN BUAT MUSIKMU DENGAN AI</h3>
-                <div class="lyric-input-container">
-                    <textarea class="lyric-input" placeholder="Lirik Anda"></textarea>
-                    <button class="create-btn">Buat</button>
-                </div>
+
+
+                <button class="instrumen-btn">Unduh Musik Anda</button>
+
             </div>
         </div>
     </div>
 </div>
+
 
         <x-product-desc
             title="Buat Musik dari Lirik"
