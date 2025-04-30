@@ -19,24 +19,25 @@ use App\Http\Controllers\CheckoutController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+ 
+// Route::post('/payment-process', function (Request $request) {
+//     return 'Pembayaran diproses untuk produk: ' . $request->input('name');
+// })->name('payment.process');
 
-Route::post('/payment-process', function (Request $request) {
-    // Sementara hanya return data untuk tes
-    return 'Pembayaran diproses untuk produk: ' . $request->input('name');
-})->name('payment.process');
-
-
-Route::post('/payment-process', [PaymentController::class, 'process'])->name('payment.process');
-
-
-
-Route::get('/change-language/{lang}', [LocalizationController::class, 'changeLanguage'])->name('change-language');
+Route::match(['get', 'post'], '/payment-process', [PaymentController::class, 'process'])->name('payment.process');
 
 Route::get('/checkout', function (Illuminate\Http\Request $request) {
     $product = $request->only(['id', 'name', 'price', 'category']);
     return view('checkout', compact('product'));
 })->name('checkout');
 
+// // Payment routes
+// Route::post('/payment/process', [PaymentController::class, 'process'])->name('payment.process');
+
+// // Add a GET route for the checkout page
+// Route::get('/checkout/{product?}', [PaymentController::class, 'checkout'])->name('checkout');
+
+Route::get('/change-language/{lang}', [LocalizationController::class, 'changeLanguage'])->name('change-language');
 
 Route::get('/portfolio', [PortfolioController::class, 'index'])->name('portfolio');
 

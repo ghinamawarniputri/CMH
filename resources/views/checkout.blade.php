@@ -2,6 +2,13 @@
 
 @section('title', 'Checkout')
 
+@section('meta')
+<script type="text/javascript"
+        src="https://app.stg.midtrans.com/snap/snap.js"
+        data-client-key="{{ config('midtrans.client_key') }}">
+</script>
+@endsection
+
 @section('content')
 <div class="min-h-screen flex flex-col items-center justify-center bg-[#0E1117] py-12 px-4 sm:px-6 lg:px-8">
     <div class="max-w-md w-full bg-[#0E1117] border border-white rounded-2xl shadow-lg px-6 py-8">
@@ -25,8 +32,8 @@
         <form action="{{ route('payment.process') }}" method="POST" class="space-y-5 text-white">
             @csrf
             <input type="hidden" name="id" value="{{ $product['id'] }}">
-            <input type="hidden" name="name" value="{{ $product['name'] }}">
-            <input type="hidden" name="price" value="{{ $product['price'] }}">
+            <input type="hidden" name="nama" value="{{ $product['name'] }}">
+            <input type="hidden" name="total" value="{{ $product['price'] }}">
             <input type="hidden" name="category" value="{{ $product['category'] }}">
 
             {{-- Email --}}
@@ -79,5 +86,47 @@
             </div>
         </form>
     </div>
+    @endif
 </div>
+@endsection
+
+@section('scripts')
+@if(isset($snapToken))
+<script type="text/javascript">
+    // For example trigger on button clicked, or any time you need
+    document.addEventListener('DOMContentLoaded', function() {
+        var payButton = document.getElementById('pay-button');
+        payButton.addEventListener('click', function () {
+            // Trigger snap popup using the transaction token
+            window.snap.pay('{{ $snapToken }}', {
+                onSuccess: function (result) {
+                    /* You may add your own implementation here */
+                    alert("{{ app()->getLocale() === 'id' ? 'Pembayaran berhasil!' : 'Payment success!' }}");
+                    console.log(result);
+                    window.location.href = "/"; // Redirect to homepage after successful payment
+                },
+                onPending: function (result) {
+                    /* You may add your own implementation here */
+                    alert("{{ app()->getLocale() === 'id' ? 'Menunggu pembayaran Anda!' : 'Waiting for your payment!' }}");
+                    console.log(result);
+                },
+                onError: function (result) {
+                    /* You may add your own implementation here */
+                    alert("{{ app()->getLocale() === 'id' ? 'Pembayaran gagal!' : 'Payment failed!' }}");
+                    console.log(result);
+                },
+                onClose: function () {
+                    /* You may add your own implementation here */
+                    alert('{{ app()->getLocale() === "id" ? "Anda menutup popup tanpa menyelesaikan pembayaran" : "You closed the popup without finishing the payment" }}');
+                }
+            });
+        });
+        
+        // Automatically trigger payment popup
+        setTimeout(function() {
+            payButton.click();
+        }, 1000);
+    });
+</script>
+@endif
 @endsection
