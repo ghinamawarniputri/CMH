@@ -1,5 +1,8 @@
 @extends('layouts.app')
 
+@section('title', 'CreativeMusicHub')
+
+
 @section('content')
 <section class="hero_section">
     <div class="video_bg">
@@ -24,7 +27,7 @@
                         aransemen profesional dalam hitungan menit.
                     </p>
                     <a href="#" class="cta_button">
-                        COBA SEKARANG ->
+                        COBA SEKARANG
                     </a>
                 </div>
             </div>
@@ -149,7 +152,7 @@
         <div class="custom-swiper-button-next">
             <i class="fas fa-chevron-right"></i>
         </div>
-        
+
         <div class="swiper portfolioSwiper">
             <div class="swiper-wrapper">
                 @foreach ($portfolios as $item)
