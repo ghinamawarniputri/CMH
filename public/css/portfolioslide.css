@@ -11,16 +11,79 @@
     background-color: var(--background);
     color: var(--heading);
     padding: 3rem 0;
+    position: relative;
+    overflow: hidden;
+    font-family: "Rajdhani", sans-serif;
+}
+
+.portfolio-section .section-title {
+    text-align: center;
+    color: var(--heading);
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 2.5rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    font-family: "Rajdhani", sans-serif;
+}
+
+.portfolio-section .section-title img {
+    width: 25px;
+    height: 25px;
+    filter: drop-shadow(1px 2px 3px #00ff80) brightness(1) invert(1);
+}
+
+.portfolio-section .section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background: var(--pink);
+    transition: width 0.3s ease;
+}
+
+.portfolio-section .section-title:hover::after {
+    width: 120px;
 }
 
 .portfolio-section .highlight {
-    color: var(--pink);
+    position: relative;
+    padding-bottom: 10px;
+    text-align: center;
+    font-weight: bold;
+    color: var(--heading);
+    font-family: "Rajdhani", sans-serif;
+    font-size: 2.5rem;
 }
 
 .portfolio-card {
-    background-color: var(--card);
-    color: var(--text);
+    background-color: var(--card) !important;
+    color: var(--heading);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    border: none !important;
+    border-radius: 12px;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    font-family: "Rajdhani", sans-serif;
+}
+
+.portfolio-card::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: var(--pink);
+    transform: scaleX(0);
     transition: transform 0.3s ease;
 }
 
@@ -28,8 +91,72 @@
     transform: translateY(-5px);
 }
 
-.custom-carousel-icon {
-    background-color: var(--background);
+.portfolio-card:hover::after {
+    transform: scaleX(1);
+}
+
+.portfolio-card .card-body {
+    padding: 1.5rem;
+}
+
+.portfolio-card .card-title {
+    color: var(--heading);
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+    font-family: "Rajdhani", sans-serif;
+}
+
+.portfolio-card .card-text {
+    color: var(--text);
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.portfolio-card .genre {
+    color: var(--pink);
+    font-size: 0.9rem;
+    font-style: italic;
+    margin-top: 0.5rem;
+}
+
+.portfolioSwiper {
+    padding: 20px 50px;
+}
+
+.swiper-slide {
+    height: auto;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    width: 40px;
+    height: 40px;
+    background-color: var(--pink);
     border-radius: 50%;
-    padding: 10px;
+    color: var(--heading) !important;
+}
+
+.swiper-button-next:after,
+.swiper-button-prev:after {
+    font-size: 20px;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+    background-color: var(--pink);
+    opacity: 0.8;
+}
+
+/* Memastikan background tetap gelap di seluruh halaman */
+html, body {
+    background-color: var(--background);
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+
+.hero_area {
+    background-color: var(--background);
 }

@@ -7,6 +7,44 @@
     --shadow: 0px 4px 12px rgba(255, 0, 127, 0.4);
 }
 
+.container.py-5 {
+    padding-top: 180px !important;
+    background-color: var(--background);
+    min-height: 100vh;
+}
+
+/* Portfolio Header with Logo */
+.portfolio-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+    gap: 1rem;
+}
+
+.portfolio-logo {
+    width: 40px;
+    margin-bottom: 20px;
+    height: auto;
+    background-color: var(--heading);
+    filter: drop-shadow(0 0 10px var(--pink));
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.portfolio-logo:hover {
+    transform: scale(1.1);
+    filter: drop-shadow(0 0 15px var(--pink));
+}
+
+h1.text-center {
+    color: var(--heading);
+    font-family: "Rajdhani", sans-serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin: 0;
+}
+
 section.container {
     background-color: var(--background);
     border-radius: 10px;
@@ -25,7 +63,7 @@ h1.text-center {
     padding: 8px 20px;
     border-radius: 50px;
     transition: all 0.3s ease;
-    font-weight: 500;
+    font-weight: 500;    
 }
 
 .filter-btn:hover, 

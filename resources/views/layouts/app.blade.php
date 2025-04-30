@@ -29,6 +29,9 @@
     <!-- responsive style -->
     <link href="{{ asset('vendor/css/responsive.css')}}" rel="stylesheet" />
     <link rel="stylesheet" type="text/css" href="{{ asset('vendor/css/custome.css')}}">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('css/produk.css') }}">
     <link rel="stylesheet" href="{{ asset('css/footer.css') }}">
     <link rel="stylesheet" href="{{ asset('css/portfolioslide.css') }}">
@@ -42,6 +45,20 @@
     <link rel="stylesheet" href="{{ asset('css/step.css') }}">
     <link rel="stylesheet" href="{{ asset('css/price-list.css') }}">
     <link rel="stylesheet" href="{{ asset('css/home.css') }}">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <style>
+        body {
+            background-color: #0e1117;
+            margin: 0;
+            padding: 0;
+        }
+        .hero_area {
+            background-color: #0e1117;
+        }
+    </style>
 </head>
 
 <body>
@@ -63,5 +80,12 @@
     <!-- custom js -->
     <script src="{{ asset('vendor/js/custom.js')}}"></script>
     @stack('scripts')
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="{{ asset('js/script.js') }}"></script>
 </body>
 </html>

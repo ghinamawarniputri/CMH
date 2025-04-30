@@ -41,7 +41,8 @@
 
 .nav-link {
     color: var(--heading) !important;
-    font-size: 1rem;
+    font-size: 2.5rem;
+    font-family: "Rajdhani", sans-serif;
     font-weight: 500;
     text-transform: uppercase;
     letter-spacing: 0.5px;
@@ -79,14 +80,16 @@
 }
 
 .dropdown-item {
-    color: var(--text);
+    color: var(--heading);
     padding: 0.5rem 1rem;
     font-size: 0.9rem;
     transition: all 0.3s ease;
+    font-family: "Rajdhani", sans-serif;
+    background: var(--background);
 }
 
 .dropdown-item:hover {
-    background: rgba(255, 255, 255, 0.05);
+    background: var(--background);
     color: var(--pink);
 }
 
@@ -98,6 +101,7 @@
     border-radius: 5px;
     font-size: 1rem;
     font-weight: bold;
+    font-family: "Rajdhani", sans-serif;
     transition: all 0.3s ease;
     margin-left: 15px;
 }
@@ -131,7 +135,7 @@
     }
 
     .dropdown-menu {
-        background: transparent;
+        background: var(--background);
         border: none;
         padding: 0;
         margin-top: 0;
@@ -139,5 +143,11 @@
 
     .dropdown-item {
         padding: 0.5rem 0;
+        background: var(--background);
+    }
+
+    .dropdown-item:hover {
+        background: var(--background);
+        color: var(--pink);
     }
 }

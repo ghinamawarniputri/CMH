@@ -137,47 +137,62 @@
 <!-- portfolios section -->
 <section class="portfolio-section">
     <div class="container">
-        <h2 class="text-center mb-4">
-            🎼 <span class="highlight">Portofolio</span> 🎼
+        <h2 class="section-title">
+            <img src="{{ asset('img/logo-portofolio.svg') }}" alt="Portfolio Icon">
+            <span class="highlight">Portofolio</span>
+            <img src="{{ asset('img/logo-portofolio.svg') }}" alt="Portfolio Icon">
         </h2>
-        <div id="portfolioCarousel" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner">
-                @foreach ($portfolios->chunk(3) as $chunkIndex => $chunk)
-                <div class="row mb-4">
-                    @foreach ($chunk as $item)
-                    <div class="col-md-4">
-                        <div class="card portfolio-card">
-                            <div class="card-body">
-                                <h5 class="card-title">{{ $item->name }}</h5>
-                                <p class="card-text"><em>{{ $item->genre }}</em></p>
-                                <iframe
-                                    width="100%"
-                                    height="166"
-                                    scrolling="no"
-                                    frameborder="no"
-                                    allow="autoplay"
-                                    src="https://w.soundcloud.com/player/?url={{ urlencode($item->link) }}&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true">
-                                </iframe>
-                            </div>
-                        </div>
+        <div class="swiper portfolioSwiper">
+            <div class="swiper-wrapper">
+                @foreach ($portfolios as $item)
+                <div class="swiper-slide">
+                    <div class="portfolio-card">
+                        <h3 class="portfolio-title">{{ strtoupper($item->name) }}</h3>
+                        <p class="portfolio-genre">{{ $item->genre }}</p>
+                        <iframe
+                            width="100%"
+                            height="166"
+                            scrolling="no"
+                            frameborder="no"
+                            allow="autoplay"
+                            src="https://w.soundcloud.com/player/?url={{ urlencode($item->link) }}&color=%23ff007f&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=false">
+                        </iframe>
                     </div>
-                    @endforeach
                 </div>
                 @endforeach
             </div>
-
-            <button class="carousel-control-prev" type="button" data-bs-target="#portfolioCarousel" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon custom-carousel-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#portfolioCarousel" data-bs-slide="next">
-                <span class="carousel-control-next-icon custom-carousel-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
         </div>
     </div>
 </section>
 
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const swiper = new Swiper('.portfolioSwiper', {
+        slidesPerView: 3,
+        spaceBetween: 30,
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        breakpoints: {
+            320: {
+                slidesPerView: 1,
+                spaceBetween: 20
+            },
+            768: {
+                slidesPerView: 2,
+                spaceBetween: 30
+            },
+            1024: {
+                slidesPerView: 3,
+                spaceBetween: 30
+            }
+        }
+    });
+});
+</script>
 <!-- end portfolios section -->
 
 @endsection

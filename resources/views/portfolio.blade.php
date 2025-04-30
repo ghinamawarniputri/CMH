@@ -2,31 +2,19 @@
 @section('title', 'Portfolio')
 
 @section('content')
-<style>
-.container.py-5 {
-    padding-top: 180px !important;
-    background-color: #0e1117;
-    min-height: 100vh;
-}
-
-h1.text-center {
-    color: var(--heading);
-    font-family: "Rajdhani", sans-serif;
-    font-size: 2.5rem;
-    font-weight: bold;
-    margin-bottom: 2rem;
-}
-</style>
-
 <section class="container py-5">
-    <h1 class="text-center mb-4">🎼 Portfolio 🎼</h1>
+    <div class="portfolio-header">
+        <img src="{{ asset('img/logo-portofolio.svg') }}" alt="Portfolio Logo" class="portfolio-logo">
+        <h1 class="text-center mb-4">Portfolio</h1>
+        <img src="{{ asset('img/logo-portofolio.svg') }}" alt="Portfolio Logo" class="portfolio-logo">
+    </div>
 
-    <div class="d-flex flex-wrap justify-content-center mb-4 gap-2">
+    <div class="d-flex flex-wrap justify-content-center mb-4 gap-8">
         @php
             $genres = ['All', 'Accoustic', 'Dubstep', 'Jazz', 'Pop', 'Progressive', 'Sundanese'];
         @endphp
         @foreach ($genres as $genre)
-            <button class="btn btn-outline-dark filter-btn" data-genre="{{ $genre }}">
+            <button class="btn btn-outline-light filter-btn" data-genre="{{ $genre }}">
                 {{ $genre }}
             </button>
         @endforeach
