@@ -1,5 +1,7 @@
 @extends('layouts.app')
 
+@section('title', 'CreativeMusicHub')
+
 @section('content')
 <section class="hero_section">
     <div class="video_bg">
