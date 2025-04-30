@@ -8,7 +8,7 @@
     <div class="instrumen-container">
         <div class="instrumen-content">
             <h1 class="instrumen-title">"Temukan Kebebasan Berkarya<br>Melalui <span class="instrumen-highlight">Instrumen</span><br>Buatanmu" <span class="instrumen-icon">🎸</span></h1>
-            
+
             <p class="instrumen-text">
                 "Jadikan ide musikmu lebih hidup dengan instrumen buatan tangan yang bisa disesuaikan. Desain, kustomisasi, dan mainkan semuanya ada di sini."
             </p>
@@ -31,7 +31,6 @@
         <div class="container">
             <div class="row">
                 <div class="col">
-                    {{-- Komponen How It Works --}}
                     <x-how-it-works :steps="[
                         ['text' => app()->getLocale() === 'id' ? 'Unggah rekaman permainan instrumen Anda.' : 'Upload your instrument recording.', 'image' => asset('img/step1.png')],
                         ['text' => app()->getLocale() === 'id' ? 'Pilih suasana hati dan gaya untuk lagu Anda.' : 'Choose the mood and style for your song.', 'image' => asset('img/step2.png')],
@@ -45,7 +44,6 @@
                     <x-price-list-product :products="[
                         [
                             'id' => 2,
-                            'image' => asset('images/catalogImage2.jpg'),
                             'name' => 'Buat Musik Instrumen',
                             'description' => 'Ciptakan melodi instrumental profesional.',
                             'cta' => 'Pesan Sekarang',

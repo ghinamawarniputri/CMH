@@ -2,7 +2,7 @@
 
 <div class="py-12 bg-gray-50">
     <div class="max-w-7xl mx-auto px-6 lg:px-8">
-        <h2 class="text-3xl font-bold tracking-tight text-center text-gray-900 mb-12">
+        <h2 class="section-title">
             {{ app()->getLocale() === 'id' ? 'Cara Kerja' : 'How It Works' }}
         </h2>
 

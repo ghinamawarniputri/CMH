@@ -1,30 +1,28 @@
 @props(['products'])
 
 <div class="price-list">
-    <h2 class="text-2xl font-bold mb-6 text-center">
+    <h2 class="price-list-title">
         {{ app()->getLocale() === 'id' ? 'Daftar Harga' : 'Product List' }}
     </h2>
 
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+    <div class="price-list-grid">
         @foreach($products as $product)
-            <div class="border rounded-lg p-6 shadow-md flex flex-col items-center">
-                <img src="{{ $product['image'] }}" alt="{{ $product['name'] }}" class="w-full h-40 object-cover mb-4 rounded">
-                <h3 class="text-lg font-semibold mb-2">{{ $product['name'] }}</h3>
-                <p class="text-sm text-gray-600 mb-4 text-center">{{ $product['description'] }}</p>
-                <ul class="text-sm text-gray-700 mb-4">
+            <div class="price-card">
+                <h3 class="price-card-name">{{ $product['name'] }}</h3>
+                <ul class="price-card-features">
                     @foreach($product['features'] as $feature)
-                        <li>• {{ $feature }}</li>
+                    <li class="price-feature">{{ $feature }}</li>
                     @endforeach
                 </ul>
-                <div class="text-xl font-bold mb-4">
+                <div class="price-card-price">
                     {{ $product['currency'] }}{{ number_format($product['price'], 0, ',', '.') }}
                 </div>
-                <form action="{{ route('checkout') }}" method="GET" class="w-full">
+                <form action="{{ route('checkout') }}" method="GET" class="price-card-form">
                     <input type="hidden" name="id" value="{{ $product['id'] }}">
                     <input type="hidden" name="name" value="{{ $product['name'] }}">
                     <input type="hidden" name="price" value="{{ $product['price'] }}">
                     <input type="hidden" name="category" value="{{ $product['category'] }}">
-                    <button type="submit" class="bg-green-500 hover:bg-green-600 text-white py-2 px-4 rounded w-full">
+                    <button type="submit" class="price-card-button">
                         {{ $product['cta'] }}
                     </button>
                 </form>
