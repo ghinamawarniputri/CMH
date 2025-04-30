@@ -121,32 +121,76 @@
     margin-top: 0.5rem;
 }
 
+.portfolio-section {
+    position: relative;
+    padding: 3rem 0;
+}
+
+.portfolio-section .container {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0;
+}
+
 .portfolioSwiper {
-    padding: 20px 50px;
+    width: 100%;
+    padding: 20px 0;
+    position: relative;
 }
 
 .swiper-slide {
     height: auto;
 }
 
-.swiper-button-next,
-.swiper-button-prev {
-    width: 40px;
-    height: 40px;
+/* Custom navigation buttons */
+.custom-swiper-button-prev,
+.custom-swiper-button-next {
+    width: 45px;
+    height: 45px;
     background-color: var(--pink);
     border-radius: 50%;
-    color: var(--heading) !important;
+    color: var(--heading);
+    position: absolute;
+    top: 60%;
+    transform: translateY(-50%);
+    z-index: 10;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
 }
 
-.swiper-button-next:after,
-.swiper-button-prev:after {
-    font-size: 20px;
+.custom-swiper-button-prev {
+    left: -80px; /* Posisi jauh di luar container */
 }
 
-.swiper-button-next:hover,
-.swiper-button-prev:hover {
+.custom-swiper-button-next {
+    right: -80px; /* Posisi jauh di luar container */
+}
+
+.custom-swiper-button-prev i,
+.custom-swiper-button-next i {
+    font-size: 18px;
+    color: var(--heading);
+}
+
+.custom-swiper-button-prev:hover,
+.custom-swiper-button-next:hover {
     background-color: var(--pink);
     opacity: 0.8;
+    transform: translateY(-50%) scale(1.1);
+}
+
+/* Portfolio card styling */
+.portfolio-card {
+    background-color: var(--card);
+    border-radius: 12px;
+    padding: 20px;
+    margin: 0 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 /* Memastikan background tetap gelap di seluruh halaman */
