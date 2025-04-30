@@ -1,13 +1,13 @@
 
 <div class="faq">
     <div class="container">
-        <div class="row">
-            <div class="col">
-                <h2 class="text-center fw-bold h2-faq" id="faq-title">
-                    Pertanyaan yang Sering Diajukan
-                </h2>
+        <div class="text-center">
+            <div class="h2-faq-wrapper">
+                <h2 class="fw-bold h2-faq" id="faq-title">Pertanyaan yang Sering Diajukan</h2>
+                <span class="faq-underline"></span>
             </div>
         </div>
+
         <div class="row row-cols-lg-2 row-cols-1 g-4 pt-5" id="faq-list">
             </div>
     </div>
@@ -117,10 +117,12 @@
             <div class="accordion shadow-sm">
                 <div class="accordion-item">
                     <div class="accordion-header" id="heading-${data.id}" aria-expanded="false" aria-controls="collapse-${data.id}">
-                        ${question}
+                        <span class="faq-question-text">${question}</span>
+                        <span class="accordion-icon" id="icon-${data.id}">\u25B8</span>
                     </div>
                     <div id="collapse-${data.id}" class="accordion-body faq-answer">
-                        ${answer}
+                        <div class="faq-divider"></div>
+                        <div class="faq-answer-text">${answer}</div>
                     </div>
                 </div>
             </div>
@@ -128,23 +130,29 @@
 
         const header = col.querySelector('.accordion-header');
         const body = col.querySelector('.accordion-body');
+        const icon = col.querySelector(`#icon-${data.id}`);
+
+        // Set initial state: ensure all FAQ items are closed by default
+        body.style.display = 'none';
+        icon.textContent = '\u25B8'; // ►
 
         header.addEventListener('click', () => {
-            const expanded = header.getAttribute('aria-expanded') === 'true' || false;
-            header.setAttribute('aria-expanded', !expanded);
-            body.style.display = expanded ? 'none' : 'block';
-            header.classList.toggle('collapsed', expanded);
-        });
+    const expanded = header.getAttribute('aria-expanded') === 'true';
+    header.setAttribute('aria-expanded', !expanded);
 
-        // Set initial state for the first item to be open (optional)
-        if (data.id === 1) {
-            header.setAttribute('aria-expanded', 'true');
-            body.style.display = 'block';
-            header.classList.remove('collapsed');
-        } else {
-            body.style.display = 'none';
-            header.classList.add('collapsed');
-        }
+    // Alih-alih mengubah display langsung, kita cukup menambahkan atau menghapus kelas show
+    if (expanded) {
+        body.style.display = 'none'; // Sembunyikan body
+        icon.textContent = '\u25B8'; // ►
+    } else {
+        body.style.display = 'block'; // Tampilkan body
+        icon.textContent = '\u25BE'; // ▼
+    }
+});
+
+
+
+
 
         return col;
     }
