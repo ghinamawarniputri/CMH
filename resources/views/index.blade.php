@@ -2,7 +2,10 @@
 
 @section('title', 'CreativeMusicHub')
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 856e3169e80346c81ecb8a8969cf45b31a528c80
 @section('content')
 <section class="hero_section">
     <div class="video_bg">
