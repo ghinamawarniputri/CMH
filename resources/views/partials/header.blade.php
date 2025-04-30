@@ -35,11 +35,11 @@
                     <li class="nav-item">
                         <a class="nav-link" href="{{ url('portfolio')}}">PORTOFOLIO</a>
                     </li>
-                    <li class="nav-item">
+                    <!-- <li class="nav-item">
                         <button class="btn" id="languageButton" onclick="toggleLanguage()">
                             ID
                         </button>
-                    </li>
+                    </li> -->
                 </ul>
             </div>
         </nav>

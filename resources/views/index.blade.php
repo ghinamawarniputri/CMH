@@ -1,5 +1,11 @@
 @extends('layouts.app')
 
+@section('title', 'CreativeMusicHub')
+
+<<<<<<< HEAD
+
+=======
+>>>>>>> 856e3169e80346c81ecb8a8969cf45b31a528c80
 @section('content')
 <section class="hero_section">
     <div class="video_bg">
@@ -24,7 +30,7 @@
                         aransemen profesional dalam hitungan menit.
                     </p>
                     <a href="#" class="cta_button">
-                        COBA SEKARANG ->
+                        COBA SEKARANG
                     </a>
                 </div>
             </div>
@@ -136,12 +142,20 @@
 
 <!-- portfolios section -->
 <section class="portfolio-section">
-    <div class="container">
+    <div class="container position-relative">
         <h2 class="section-title">
             <img src="{{ asset('img/logo-portofolio.svg') }}" alt="Portfolio Icon">
             <span class="highlight">Portofolio</span>
             <img src="{{ asset('img/logo-portofolio.svg') }}" alt="Portfolio Icon">
         </h2>
+        <!-- Tombol navigasi dipindah ke luar swiper -->
+        <div class="custom-swiper-button-prev">
+            <i class="fas fa-chevron-left"></i>
+        </div>
+        <div class="custom-swiper-button-next">
+            <i class="fas fa-chevron-right"></i>
+        </div>
+
         <div class="swiper portfolioSwiper">
             <div class="swiper-wrapper">
                 @foreach ($portfolios as $item)
@@ -161,8 +175,6 @@
                 </div>
                 @endforeach
             </div>
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
         </div>
     </div>
 </section>
@@ -173,8 +185,8 @@ document.addEventListener('DOMContentLoaded', function() {
         slidesPerView: 3,
         spaceBetween: 30,
         navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
+            nextEl: '.custom-swiper-button-next',
+            prevEl: '.custom-swiper-button-prev',
         },
         breakpoints: {
             320: {

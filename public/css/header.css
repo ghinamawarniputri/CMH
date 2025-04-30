@@ -71,26 +71,37 @@
 }
 
 .dropdown-menu {
-    background: var(--background);
+    background: var(--background) !important;
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 8px;
     padding: 0.5rem 0;
     min-width: 200px;
     margin-top: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
 .dropdown-item {
-    color: var(--heading);
-    padding: 0.5rem 1rem;
+    color: var(--heading) !important;
+    padding: 0.8rem 1rem;
     font-size: 0.9rem;
     transition: all 0.3s ease;
     font-family: "Rajdhani", sans-serif;
-    background: var(--background);
+    background: var(--background) !important;
+    font-weight: 500;
 }
 
-.dropdown-item:hover {
-    background: var(--background);
-    color: var(--pink);
+.dropdown-item:hover,
+.dropdown-item:focus,
+.dropdown-item:active {
+    background: var(--background) !important;
+    color: var(--pink) !important;
+}
+
+/* Memastikan dropdown tetap terlihat saat aktif */
+.dropdown-menu.show {
+    display: block;
+    opacity: 1;
+    visibility: visible;
 }
 
 #languageButton {
@@ -135,19 +146,23 @@
     }
 
     .dropdown-menu {
-        background: var(--background);
+        background: var(--background) !important;
         border: none;
         padding: 0;
         margin-top: 0;
+        box-shadow: none;
     }
 
     .dropdown-item {
-        padding: 0.5rem 0;
-        background: var(--background);
+        padding: 0.5rem 1rem;
+        color: var(--heading) !important;
+        background: var(--background) !important;
     }
 
-    .dropdown-item:hover {
-        background: var(--background);
-        color: var(--pink);
+    .dropdown-item:hover,
+    .dropdown-item:focus,
+    .dropdown-item:active {
+        background: var(--background) !important;
+        color: var(--pink) !important;
     }
 }

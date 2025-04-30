@@ -20,9 +20,15 @@
             </a>
           </div>
           <div class="social mt-3">
-            <i class="fa-brands fa-instagram"></i>
-            <i class="fa-solid fa-globe"></i>
-            <i class="fa-regular fa-envelope"></i>
+            <a href="https://www.instagram.com/yukmaridotcom/" target="_blank">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="https://creativemusichub.com" target="_blank">
+              <i class="fa-solid fa-globe"></i>
+            </a>
+            <a href="mailto:info@creativemusichub.com">
+              <i class="fa-regular fa-envelope"></i>
+            </a>
           </div>
         </div>
 
