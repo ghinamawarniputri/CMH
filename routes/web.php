@@ -7,7 +7,7 @@ use App\Http\Controllers\PortfolioController;
 use App\Http\Controllers\LocalizationController;
 use Illuminate\Http\Request;
 use App\Http\Controllers\PaymentController;
-
+use App\Http\Controllers\CheckoutController;
 
 /*
 |--------------------------------------------------------------------------
@@ -114,3 +114,5 @@ Route::get('/contact', function () {
 Route::post('/auth/logout', [\App\Http\Controllers\Filament\LogoutController::class, 'logout'])->name('filament.admin.auth.logout');
 
 // Route::post('/contact/send', [ContactController::class, 'sendContact'])->name('contact.send');
+
+Route::post('/checkout/store', [CheckoutController::class, 'store'])->name('checkout.store');
